@@ -31,8 +31,12 @@ form.addEventListener("submit", function(event){
   // teamCounter.textContent edits on webpage
   teamCounter.textContent = parseInt(teamCounter.textContent) + 1; // converts str to int
 
-  const message = `Welcome, ${name} from ${teamName}`;
-  console.log(message);
+  const welcomeMessage = document.getElementById("welcomeMessage");
+  welcomeMessage.textContent = `🌟 Welcome, ${name} from ${teamName}! 🌟`;
+
+  //const message = `Welcome, ${name} from ${teamName}`;
+  //console.log(message);
+
   
   form.reset(); // clears all input fields in the form
 });
