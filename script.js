@@ -5,7 +5,7 @@ const teamSelect = document.getElementById("teamSelect");
 
 // track attendence
 let count = 0;
-const maxCount = 50;
+const maxCount = 5;
 
 // handle form submission, event handler
 form.addEventListener("submit", function(event){
@@ -43,6 +43,29 @@ form.addEventListener("submit", function(event){
 
   //const message = `Welcome, ${name} from ${teamName}`;
   //console.log(message);
+
+  if(count == maxCount){
+    const congratMessage = document.getElementById("congratMessage");
+
+    const teamwater = document.getElementById("waterCount");
+    let teamWaterCount = parseInt(teamwater.textContent);
+    const teamzero = document.getElementById("zeroCount");
+    let teamZeroCount = parseInt(teamzero.textContent);
+    const teampower = document.getElementById("powerCount");
+    let teamPowerCount = parseInt(teampower.textContent);
+
+    if(teamWaterCount > teamZeroCount && teamWaterCount > teamPowerCount){
+      congratMessage.textContent = "🎉 Attendee check-in goal has been reached! 🎉\n Congratulations! Team Water Wise has the most attendees!";
+    } else if(teamZeroCount > teamWaterCount && teamZeroCount > teamPowerCount){
+      congratMessage.textContent = "🎉 Attendee check-in goal has been reached! 🎉\n Congratulations! Team Net Zero has the most attendees!";
+    } else if(teamPowerCount > teamWaterCount && teamPowerCount > teamZeroCount){
+      congratMessage.textContent = "🎉 Attendee check-in goal has been reached! 🎉\n Congratulations! Team Renewables has the most attendees!";
+    } else {
+      congratMessage.textContent = "🎉 Attendee check-in goal has been reached! 🎉\n Congratulations! There is a tie between teams!";
+    }
+    
+
+  }
 
   
   form.reset(); // clears all input fields in the form

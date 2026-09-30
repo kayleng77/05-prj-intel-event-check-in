@@ -358,6 +358,15 @@ select {
   text-align: center;
 }
 
+.congratMessage {
+  font-size: 18px;
+  font-weight: 500;
+  color: #0071c5;
+  margin-bottom: 15px;
+  text-align: center;
+  white-space: pre-line; /* Preserve line breaks */
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero {
