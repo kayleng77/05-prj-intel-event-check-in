@@ -82,13 +82,13 @@ form.addEventListener("submit", function(event)
     let teamPowerCount = parseInt(teampower.textContent);
 
     if(teamWaterCount > teamZeroCount && teamWaterCount > teamPowerCount){
-      congratMessage.textContent = "🎉 Attendee check-in goal has been reached! 🎉\n Congratulations! Team Water Wise has the most attendees!";
+      congratMessage.textContent = "Attendee check-in goal has been reached! 🎉\n Congratulations! Team Water Wise has the most attendees!";
     } else if(teamZeroCount > teamWaterCount && teamZeroCount > teamPowerCount){
-      congratMessage.textContent = "🎉 Attendee check-in goal has been reached! 🎉\n Congratulations! Team Net Zero has the most attendees!";
+      congratMessage.textContent = "Attendee check-in goal has been reached! 🎉\n Congratulations! Team Net Zero has the most attendees!";
     } else if(teamPowerCount > teamWaterCount && teamPowerCount > teamZeroCount){
-      congratMessage.textContent = "🎉 Attendee check-in goal has been reached! 🎉\n Congratulations! Team Renewables has the most attendees!";
+      congratMessage.textContent = "Attendee check-in goal has been reached! 🎉\n Congratulations! Team Renewables has the most attendees!";
     } else {
-      congratMessage.textContent = "🎉 Attendee check-in goal has been reached! 🎉\n Congratulations! There is a tie between teams!";
+      congratMessage.textContent = "Attendee check-in goal has been reached! 🎉\n Congratulations! There is a tie between teams!";
     }
   }
 
