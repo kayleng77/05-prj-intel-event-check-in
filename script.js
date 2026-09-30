@@ -22,6 +22,10 @@ form.addEventListener("submit", function(event){
   count++;
   console.log("Total checkins: ", count);
 
+  // update the count on the webpage
+  const totalCount = document.getElementById("attendeeCount");
+  totalCount.textContent = count; // updates total checkins on webpage
+
   //update progress bar
   const percentage = Math.round((count / maxCount) *100) + "%"; // progress bar length
   console.log(`Progress: ${percentage}`);
