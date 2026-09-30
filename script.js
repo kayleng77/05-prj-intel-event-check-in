@@ -7,8 +7,14 @@ const teamSelect = document.getElementById("teamSelect");
 let count = 0;
 const maxCount = 5;
 
+// name arrays
+let teamWater = [];
+let teamZero = [];
+let teamPower = [];
+
 // handle form submission, event handler
-form.addEventListener("submit", function(event){
+form.addEventListener("submit", function(event)
+{
   event.preventDefault();
 
   //get form values
@@ -38,6 +44,27 @@ form.addEventListener("submit", function(event){
   // teamCounter.textContent edits on webpage
   teamCounter.textContent = parseInt(teamCounter.textContent) + 1; // converts str to int
 
+  if(team === "water"){
+    teamWater.push(name);
+    const waterNameList = document.getElementById("waterNameList");
+    waterNameList.textContent = teamWater.join("\n");
+    //waterNameList.innerHTML = teamWater.map(n => `<div>${n}</div>`).join("");
+  } else if(team === "zero"){
+    teamZero.push(name);
+    const zeroNameList = document.getElementById("zeroNameList");
+    zeroNameList.textContent = teamZero.join("\n");
+    //zeroNameList.innerHTML = teamZero.map(n => `<div>${n}</div>`).join("");
+  } else if(team === "power"){
+    teamPower.push(name);
+    const powerNameList = document.getElementById("powerNameList");
+    powerNameList.textContent = teamPower.join("\n");
+    //powerNameList.innerHTML = teamPower.map(n => `<div>${n}</div>`).join("");
+  }
+
+  /*console.log("Team Water Wise:", teamWater);
+  console.log("Team Net Zero:", teamZero);
+  console.log("Team Renewables:", teamPower);*/
+
   const welcomeMessage = document.getElementById("welcomeMessage");
   welcomeMessage.textContent = `🌟 Welcome, ${name} from ${teamName}! 🌟`;
 
@@ -63,10 +90,7 @@ form.addEventListener("submit", function(event){
     } else {
       congratMessage.textContent = "🎉 Attendee check-in goal has been reached! 🎉\n Congratulations! There is a tie between teams!";
     }
-    
-
   }
 
-  
   form.reset(); // clears all input fields in the form
 });

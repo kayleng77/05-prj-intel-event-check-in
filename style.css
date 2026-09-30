@@ -23,8 +23,6 @@ body {
   font-weight: 500;
 }
 
-
-
 /* Hero Section */
 .hero {
   background: linear-gradient(
@@ -364,6 +362,15 @@ select {
   color: #0071c5;
   margin-bottom: 15px;
   text-align: center;
+  white-space: pre-line; /* Preserve line breaks */
+}
+
+.nameList {
+  /*font-size: 14px;
+  color: #475569;
+  margin-top: 5px;
+  text-align: left;
+  padding-left: 10px;*/
   white-space: pre-line; /* Preserve line breaks */
 }
 
